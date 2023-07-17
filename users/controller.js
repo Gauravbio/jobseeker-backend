@@ -6,7 +6,7 @@ exports.createUser=async (req,res)=>{
     try {
         const {name,email,password,username}=req.body;
 
-        if(!name || !email || !password || !username || !emailChecker(email)) {
+        if(!name || !email || !password || !username) {
             return res.status(400).json({message: "invalid request body"});
         }
 
@@ -69,7 +69,7 @@ exports.loginUser=async (req,res)=> {
     try {
         const {email,password}=req.body;
 
-        if(!email || !password || !emailChecker(email)) {
+        if(!email || !password) {
             return res.status(400).json({
                 message: "Invalid request body"
             })

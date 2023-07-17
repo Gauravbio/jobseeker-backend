@@ -1,12 +1,12 @@
-const { default: isEmail } = require("validator/lib/isemail");
+// const { default: isEmail } = require("validator/lib/isemail");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const crypto=require("crypto")
 
-exports.emailChecker=(email)=>{
-    // console.log(isEmail("gp206@gmail.com"));
-    return isEmail(email);
-}
+// exports.emailChecker=(email)=>{
+//     // console.log(isEmail("gp206@gmail.com"));
+//     return isEmail(email);
+// }
 
 
 exports.generateToken = function (newUser,expires) {
